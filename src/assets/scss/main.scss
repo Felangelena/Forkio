@@ -1,0 +1,74 @@
+@import 'reset';
+
+$titleColor: #635C73;
+$txtColor: #323232;
+
+.container {
+    padding: 0 10px;
+}
+
+.title {
+    color: $titleColor;
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.editor {
+    min-height: 395px;
+    padding-top: 52px;
+    padding-bottom: 120px;
+
+    &__txt {
+        margin-top: 27px;
+        padding: 0 10px;
+        color: $txtColor;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Lato';
+        line-height: 20px;
+    }
+
+    &__btns {
+        margin-top: 15px;
+        padding: 0 25px;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+}
+
+.btn-github {
+    width: 118px;
+    height: 26px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border: solid 1px rgba(31, 35, 40, 0.15);
+    border-radius: 5px;
+    background-color: rgb(246, 248, 250);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #f3f4f6;
+    }
+
+    &:nth-child(1) {
+        margin-right: 10px;
+    }
+
+    &__num {
+        height: 100%;
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-left: solid 1px rgba(31, 35, 40, 0.15);
+    }
+}
+
