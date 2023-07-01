@@ -1,13 +1,31 @@
 @import 'reset';
 
 $titleColor: #635C73;
+$titleColor2: #8D81AC;
+$titleColor3: #FFF;
 $txtColor: #323232;
+$getTitleColor: #323232;
+$getTxtColor: #848E97;
+$bgColor: #645766;
+$cardHeadBg:rgba(255, 255, 255, 0.06);
+$cardBodyBg:rgba(255, 255, 255, 0.11);
+$cardTxtColor: #fff;
+$cardLineColor: #8D81AC;
+$cardBtnBg:rgba(255, 255, 255, 0.15);
+$cardHeadPriorBg: #3F2C41;
+$cardBodyPriorBg: #463048;
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
 
 .container {
     padding: 0 10px;
 }
 
-.title {
+.section-title {
     color: $titleColor;
     text-align: center;
     font-size: 26px;
@@ -18,7 +36,6 @@ $txtColor: #323232;
 }
 
 .editor {
-    min-height: 395px;
     padding-top: 52px;
     padding-bottom: 120px;
 
@@ -72,3 +89,365 @@ $txtColor: #323232;
     }
 }
 
+.section-title2 {
+    color: $titleColor2;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.get__grid {
+    margin-top: 37px;
+    margin-bottom: 66px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 37px;
+}
+
+.get__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: center;
+    justify-self: center;
+
+    &__img {
+        margin: 0 auto 27px auto;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        color: $getTitleColor;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+
+    &__txt {
+        padding: 0 15px;
+        color: $getTxtColor;
+        font-size: 14px;
+        font-family: 'Lato';
+        line-height: 21px;
+        text-align: center;
+    }
+}
+
+.get__img {
+    margin-left: auto;
+}
+
+.subsciption {
+    padding-bottom: 12px;
+    background-color: $bgColor;
+
+    &__grid {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+}
+
+.section-title3 {
+    color: $titleColor3;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.card {
+    padding: 0 20px;
+
+    &__head {
+        width: 100%;
+        padding: 30px 0;
+        background-color: $cardHeadBg;
+    }
+
+    &__body {
+        width: 100%;
+        padding: 30px 0 67px 0;
+        background-color: $cardBodyBg;
+    }
+
+    &__plan {
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat';
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    &__price {
+        margin-top: 30px;
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Montserrat';
+        line-height: 62px;
+        text-transform: uppercase;
+    }
+
+    &__period {
+        margin-top: 20px;
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Montserrat';
+        line-height: 16px;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            margin: 38px auto 0 auto;
+            display: block;
+            width: 60px;
+            height: 5px;
+            background: $cardLineColor;
+        }
+    }
+
+    &__features {
+        margin-top: 30px;
+
+        &__item {
+            color: $cardTxtColor;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Montserrat';
+            line-height: 28px;
+        }
+    }
+
+    &__btn {
+        margin: 37px auto 0 auto;
+        width: 163px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $cardBtnBg;
+        border-radius: 20px;
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        line-height: 15px;
+        text-transform: uppercase;
+        transition: box-shadow .3s;
+
+        &:hover, &:active {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.card--prior {
+    .card__head {
+        background-color: $cardHeadPriorBg;
+    }
+
+    .card__body {
+        background-color: $cardBodyPriorBg;
+    }
+}
+
+@media (min-width: 430px) {
+    .btn-github:nth-child(2) {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 481px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .editor {
+        padding-top: 94px;
+        padding-bottom: 160px;
+
+        &__txt {
+            margin-top: 30px;
+            font-size: 21px;
+            line-height: 32px;
+        }
+    }
+
+    .section-title {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .section-title2 {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .get__grid {
+        margin-top: 50px;
+        row-gap: 60px;
+    }
+
+    .get__item {
+        grid-template-columns: 111px 1fr;
+        column-gap: 23px;
+
+        &__img {
+            margin: 0 auto;
+        }
+
+        &__desc {
+            display: flex;
+            flex-flow: column;
+        }
+
+        &__title {
+            text-align: left;
+            line-height: 21px;
+        }
+
+        &__txt {
+            padding: 0;
+            font-family: 'Montserrat';
+            text-align: left;
+        }
+    }
+
+    .subsciption {
+        padding-top: 88px;
+        padding-bottom: 94px;
+        background: url('/dist/assets/images/subsciption_bg_tablet.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &__grid {
+            margin-top: 39px;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 30px;
+            column-gap: 25px;
+        }
+    }
+
+    .section-title3 {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .card {
+        padding: 0;
+
+        &__head {
+            padding: 36px 0;
+        }
+
+        &__body {
+            height: 360px;
+            padding: 30px 0 36px 0;
+        }
+
+        &__price {
+            margin-top: 0;
+        }
+
+        &__features {
+            margin-top: 30px;
+            min-height: 36px;
+
+            &__item {
+                line-height: 18px;
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .card--prior {
+        .card {
+
+            &__body {
+                padding-top: 4px;
+            }
+
+            &__price {
+                font-size: 82px;
+                line-height: 90px;
+            }
+
+            &__period {
+                margin-top: 16px;
+                &::after {
+                    margin-top: 36px;
+                }
+            }
+
+            &__features {
+                margin-top: 30px;
+            }
+
+            &__btn {
+                margin-top: 43px;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+
+    .subsciption__grid {
+        padding: 0 30px;
+    }
+
+    .card {
+
+        &:nth-child(1) {
+            padding-left: 40px;
+        }
+
+        &:nth-child(2n) {
+            padding-right: 40px;
+        }
+
+        &:nth-child(4) {
+            margin-top: 40px;
+        }
+    }
+
+    .card--prior {
+        .card {
+            &__head {
+                padding: 43px 0;
+            }
+
+            &__body {
+                min-height: 450px;
+                padding: 14px 0 47px 0;
+            }
+
+            &__price {
+                font-size: 82px;
+                line-height: 90px;
+            }
+
+            &__period {
+                margin-top: 16px;
+                &::after {
+                    margin-top: 46px;
+                }
+            }
+
+            &__features {
+                margin-top: 40px;
+            }
+
+            &__btn {
+                margin-top: 83px;
+            }
+        }
+    }
+}
