@@ -6,6 +6,7 @@ $titleColor3: #FFF;
 $txtColor: #323232;
 $getTitleColor: #323232;
 $getTxtColor: #848E97;
+$getBG: #F4F4F4;
 $bgColor: #645766;
 $cardHeadBg:rgba(255, 255, 255, 0.06);
 $cardBodyBg:rgba(255, 255, 255, 0.11);
@@ -269,7 +270,7 @@ img {
     }
 
     .editor {
-        padding-top: 94px;
+        padding-top: 88px;
         padding-bottom: 160px;
 
         &__txt {
@@ -448,6 +449,99 @@ img {
             &__btn {
                 margin-top: 83px;
             }
+        }
+    }
+}
+
+
+@media (min-width: 993px) {
+    .container {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0;
+    }
+
+    .editor {
+        padding-top: 66px;
+        padding-bottom: 70px;
+
+        &__txt {
+            margin: 35px auto 0 auto;
+            max-width: 871px;
+        }
+
+        &__btns {
+            margin-top: 0;
+        }
+    }
+
+    .get {
+        padding-top: 100px;
+        padding-bottom: 10px;
+        background: $getBG;
+        overflow: hidden;
+
+        &__container {
+            position: relative;
+        }
+
+        &__grid {
+            margin-top: 0;
+            max-width: 40vw;
+            padding-left: 15px;
+        }
+
+        .section-title2 {
+            position: absolute;
+            text-align: left;
+            right: 80px;
+        }
+
+        &__img {
+            position: absolute;
+            right: -90px;
+            top: 100px;
+        }
+    }
+
+    .subsciption {
+        padding-top: 112px;
+        padding-bottom: 73px;
+        background: url('/dist/assets/images/subsciption_bg_desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &__grid {
+            margin-top: 60px;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 15px;
+        }
+    }
+
+    .card:nth-child(1) {
+        padding-left: 0;
+    }
+
+    .card:nth-child(2n) {
+        padding-right: 0;
+    }
+
+    .card:nth-child(4) {
+        margin-top: 50px;
+    }
+
+    .card {
+        margin-top: 50px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .get {
+        &__grid {
+            max-width: 540px;
+            padding-left: 0;
         }
     }
 }
