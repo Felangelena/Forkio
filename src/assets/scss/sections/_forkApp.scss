@@ -1,0 +1,275 @@
+.header {
+    background-color: rgb(39, 38, 42);
+    font-family: $font-montserrat;
+
+    @include tablet {
+        padding: 22px 20px;
+    }
+
+    &__content {
+        @include flex-row-between;
+        flex-wrap: wrap;
+        padding: 31px 6px;
+
+        @include tablet {
+            position: relative;
+            padding: 0;
+        }
+    }
+
+    &__logo {
+        @include flex-row-center;
+        text-decoration: none;
+        order: 1;
+
+        &:hover .header__logo-img {
+            background-image: url("../../../../dist/assets/images/logo/logo-hover.png");
+        }
+
+        &:hover .header__title {
+            color: #fff;
+        }
+    }
+
+    &__logo-img {
+        background-image: url("../../../../dist/assets/images/logo/logo.png");
+        width: 43px;
+        height: 41px;
+    }
+
+    &__btn {
+        font-weight: 700;
+        padding: 11px 24px;
+        font-size: 15px;
+        order: 3;
+
+        @include tablet {
+            padding: 12px 35px;
+            font-size: 16px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        @include desktop {
+            min-width: 145px;
+            margin-left: 24px;
+            order: 3;
+        }
+    }
+
+    &__burger-menu {
+        background-image: url("../../../../dist/assets/images/logo/btn-bars.png");
+        width: 26px;
+        height: 21px;
+        order: 3;
+
+        @include min-width(#{$landscape-mobile-big + 1}) {
+            display: none;
+        }
+
+        &_opened {
+            background-image: url("../../../../dist/assets/images/logo/btn-close.png") no-repeat center;
+
+            +.header__menu {
+                display: flex;
+            }
+        }
+    }
+
+    &__title {
+        margin-left: 13px;
+        font-size: 24px;
+        font-weight: 700;
+        color: $btn-color;
+        text-transform: uppercase;
+        font-family: $font-lato;
+        display: none;
+
+        @include min-width(#{$landscape-mobile-normal + 1}) {
+            display: block;
+        }
+    }
+}
+
+.header__menu {
+    @include flex-column-center;
+    position: absolute;
+    top: 103px;
+    right: 0;
+    left: 0;
+    display: none;
+    background-color: #333;
+    z-index: 1;
+
+    @include min-width(#{$landscape-mobile-big + 1}) {
+        @include flex-row-between;
+        position: static;
+        margin-top: 0;
+        flex-direction: row;
+        background-color: transparent;
+        order: 3;
+        width: 100%;
+        margin-top: 22px;
+    }
+
+    @include desktop {
+        order: 2;
+        width: auto;
+        margin-top: 0;
+        flex-grow: 8;
+        justify-content: flex-end;
+    }
+}
+
+.header-menu {
+    &__link {
+        font-size: 32px;
+        color: #fff;
+
+        @include min-width(#{$landscape-mobile-big + 1}) {
+            color: $btn-color;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding: 7vw;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+        @include min-width(#{$landscape-mobile-big + 1}) {
+            width: auto;
+            padding: 0 24px;
+            border: none;
+        }
+    }
+}
+
+.btn {
+    @include clear-default-input-style;
+    @include flex-row-center;
+
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+
+    &_color {
+        background-color: $btn-color;
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid $btn-color;
+            color: $btn-color;
+        }
+    }
+
+    &_download {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px 31px 16px 32px;
+        font-size: 18px;
+        font-weight: 700;
+        position: absolute;
+        bottom: -24px;
+        border: 1px solid transparent;
+
+        @include min-width(#{$landscape-mobile-normal + 1}) {
+            font-size: 21px;
+            max-width: 390px;
+        }
+    }
+}
+
+.fork-app {
+    position: relative;
+    background-image: url("../../../../dist/assets/images/beackgrounds/header-bg.png");
+    background-size: 400%;
+    background-position: center;
+    padding: 43px 21px;
+    height: 80vh;
+    font-family: $font-montserrat;
+
+    @include mobile-normal {
+        padding: 101px 42px 0;
+    }
+
+
+    @include desktop {
+        background-size: cover;
+        padding-top: 60px;
+    }
+
+
+    &__content {
+        @include flex-column-center;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 700;
+
+        @include mobile-normal {
+            font-size: 54px;
+        }
+
+
+        @include tablet {
+            font-size: 72px;
+        }
+
+
+        @include desktop {
+            font-size: 82px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 34px;
+        color: $btn-color;
+        margin: 20px 0 10px;
+        text-align: center;
+        font-family: $font-lato;
+
+        @include mobile-normal {
+            font-size: 20px;
+        }
+
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+
+        @include desktop {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 21px;
+        color: $grey;
+
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+}
+
+.fork-app__btn-subtext {
+    font-size: 14px;
+    font-family: $font-montserrat;
+    color: $grey;
+    padding-top: 340px;
+}

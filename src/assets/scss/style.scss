@@ -1,0 +1,11 @@
+@import "options/reset";
+@import "variables/variables";
+@import "mixins/mixin";
+@import "sections/block";
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
