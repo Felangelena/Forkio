@@ -1,7 +1,6 @@
 .people {
     background: url("../../../../dist/assets/images/beackgrounds/main-bg.png") no-repeat center;
     background-size: cover;
-    background-color: rgba(75, 59, 78, 1);
     background-blend-mode: multiply;
     padding: 61px 25px 0 30px;
     @include flex-column-center;
@@ -33,7 +32,7 @@
     }
 
     &__line {
-        width: 100%;
+        width: 60%;
         background-color: #645766;
         height: 2px;
 
