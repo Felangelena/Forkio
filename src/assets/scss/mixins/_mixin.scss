@@ -36,15 +36,6 @@
     outline: none;
 }
 
-@mixin github-styles {
-    padding: 3px 10px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 20px;
-    font-family: $fonts-github;
-    color: #24292e;
-}
-
 @mixin white-bold-centered-text {
     font-weight: 700;
     color: #fff;

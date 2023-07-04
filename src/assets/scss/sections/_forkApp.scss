@@ -140,9 +140,16 @@
     }
 
     &__item {
+        // :focus {
+        //     color: #8D81AC;
+        //     border-left: 5px;
+        //     border-left: 8px solid #8D81AC;
+
+        // }
+
         width: 100%;
         padding: 7vw;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        border-bottom: 5px solid rgba(255, 255, 255, 0.04);
 
         @include min-width(#{$landscape-mobile-big + 1}) {
             width: auto;
@@ -151,6 +158,11 @@
         }
     }
 }
+
+.header-menu__item:focus {
+    color: red;
+}
+
 
 .btn {
     @include clear-default-input-style;
