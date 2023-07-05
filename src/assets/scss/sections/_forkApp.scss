@@ -23,7 +23,7 @@
         order: 1;
 
         &:hover .header__logo-img {
-            background-image: url("../../../../dist/assets/images/logo/logo-hover.png");
+            background-image: url("../../../dist/assets/images/logo/logo-hover.png");
         }
 
         &:hover .header__title {
@@ -32,7 +32,7 @@
     }
 
     &__logo-img {
-        background-image: url("../../../../dist/assets/images/logo/logo.png");
+        background-image: url("../../../dist/assets/images/logo/logo.png");
         width: 43px;
         height: 41px;
     }
@@ -59,7 +59,7 @@
     }
 
     &__burger-menu {
-        background-image: url("../../../../dist/assets/images/logo/btn-bars.png");
+        background-image: url("../../../dist/assets/images/logo/btn-bars.png");
         width: 26px;
         height: 21px;
         order: 3;
@@ -69,7 +69,7 @@
         }
 
         &_opened {
-            background-image: url("../../../../dist/assets/images/logo/btn-close.png") no-repeat center;
+            background-image: url("../../../dist/assets/images/logo/btn-close.png") no-repeat center;
 
             +.header__menu {
                 display: flex;
@@ -143,6 +143,7 @@
         &:active {
             color: #8D81AC;
             position: relative;
+
             &::before {
                 position: absolute;
                 top: -8px;
@@ -173,6 +174,7 @@
     .header-menu__link:active::before {
         display: none;
     }
+
     .header-menu__link:active {
         color: #fff;
     }
@@ -215,7 +217,7 @@
 
 .fork-app {
     position: relative;
-    background-image: url("../../../../dist/assets/images/beackgrounds/header-bg.png");
+    background-image: url("../../../dist/assets/images/beackgrounds/header-bg.png");
     background-size: 400%;
     background-position: center;
     padding: 43px 21px;
