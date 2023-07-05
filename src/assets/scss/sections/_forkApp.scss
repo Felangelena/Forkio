@@ -280,8 +280,9 @@
 }
 
 .fork-app__btn-subtext {
+    position: absolute;
+    bottom: -58px;
     font-size: 14px;
     font-family: $font-montserrat;
     color: $grey;
-    padding-top: 312px;
 }
