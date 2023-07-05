@@ -94,6 +94,8 @@
 
 .header__menu {
     @include flex-column-center;
+    width: 90%;
+    margin: 0 auto;
     position: absolute;
     top: 103px;
     right: 0;
@@ -137,16 +139,24 @@
         &:hover {
             color: #fff;
         }
+
+        &:active {
+            color: #8D81AC;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -8px;
+                left: -7vw;
+                content: "";
+                display: block;
+                width: 8px;
+                height: 53px;
+                background-color: #8D81AC;
+            }
+        }
     }
 
     &__item {
-        // :focus {
-        //     color: #8D81AC;
-        //     border-left: 5px;
-        //     border-left: 8px solid #8D81AC;
-
-        // }
-
         width: 100%;
         padding: 7vw;
         border-bottom: 5px solid rgba(255, 255, 255, 0.04);
@@ -159,10 +169,14 @@
     }
 }
 
-.header-menu__item:focus {
-    color: red;
+@media (min-width: 481px) {
+    .header-menu__link:active::before {
+        display: none;
+    }
+    .header-menu__link:active {
+        color: #fff;
+    }
 }
-
 
 .btn {
     @include clear-default-input-style;
