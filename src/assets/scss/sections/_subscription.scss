@@ -1,0 +1,120 @@
+.subsciption {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    background-color: $bgColor;
+
+    &__grid {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+}
+
+.section-title3 {
+    color: $titleColor3;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.card {
+    padding: 0 20px;
+
+    &__head {
+        width: 100%;
+        padding: 30px 0;
+        background-color: $cardHeadBg;
+    }
+
+    &__body {
+        width: 100%;
+        padding: 30px 0 67px 0;
+        background-color: $cardBodyBg;
+    }
+
+    &__plan {
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat';
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    &__price {
+        margin-top: 30px;
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Montserrat';
+        line-height: 62px;
+        text-transform: uppercase;
+    }
+
+    &__period {
+        margin-top: 20px;
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Montserrat';
+        line-height: 16px;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            margin: 38px auto 0 auto;
+            display: block;
+            width: 60px;
+            height: 5px;
+            background: $cardLineColor;
+        }
+    }
+
+    &__features {
+        margin-top: 30px;
+
+        &__item {
+            color: $cardTxtColor;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Montserrat';
+            line-height: 28px;
+        }
+    }
+
+    &__btn {
+        margin: 37px auto 0 auto;
+        width: 163px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $cardBtnBg;
+        border-radius: 20px;
+        color: $cardTxtColor;
+        text-align: center;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        line-height: 15px;
+        text-transform: uppercase;
+        transition: box-shadow .3s;
+
+        &:hover,
+        &:active {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.card--prior {
+    .card__head {
+        background-color: $cardHeadPriorBg;
+    }
+
+    .card__body {
+        background-color: $cardBodyPriorBg;
+    }
+}
